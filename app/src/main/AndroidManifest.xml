@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.soobineey.androidexample">
+
+  <uses-permission android:name="android.permission.RECEIVE_SMS" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+  <application
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme">
+    <activity android:name=".chap07_p441_doitmission14.ToastRecyclerViewMainActivity"></activity>
+    <activity android:name=".chap07_p440_doitmission13.AddRecyclerViewMainActivity" />
+    <activity android:name=".chap06_p393_doitmission12.ServiceToBroadcastingMainActivity" />
+    <activity android:name=".chap06_p392_doitmission11.ServiceApplicationMainActivity" />
+    <activity android:name=".chap07_p436_spinner.SpinnerMainActivity" />
+    <activity android:name=".chap07_p418_recyclerview.RecyclerViewMainActivity" />
+    <activity android:name=".chap07_p409_cardview.CardMainActivity" />
+    <activity android:name=".chap07_p402_newview.MyButtonMainActivity" />
+    <activity android:name=".chap07_p397_ninepatch.NinePatchMainActivity" />
+    <activity android:name=".chap06_p384_permission2.Permission2MainActivity" />
+    <activity android:name=".chap06_p380_permission.PermissionMainActivity" />
+    <activity android:name=".chap06_p363_broadcasting.SmsActivity" />
+    <activity android:name=".chap06_p363_broadcasting.BroadcastingMainActivity" />
+    <activity android:name=".chap06_p356_service.ServiceMainActivity" />
+    <activity android:name=".MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+
+    <service android:name=".chap06_p356_service.MyService" />
+    <service android:name=".chap06_p392_doitmission11.PassingService" />
+    <service android:name=".chap06_p393_doitmission12.SendService" />
+
+    <receiver
+      android:name=".chap06_p363_broadcasting.SmsReceiver"
+      android:enabled="true"
+      android:exported="true">
+      <intent-filter>
+        <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+      </intent-filter>
+    </receiver>
+    <receiver
+      android:name=".chap06_p393_doitmission12.DataReceiver"
+      android:enabled="true"
+      android:exported="true">
+      <intent-filter>
+        <action android:name="com.soobineey.androidexample.chap06_p393_doitmission12" />
+      </intent-filter>
+    </receiver>
+  </application>
+
+</manifest>
